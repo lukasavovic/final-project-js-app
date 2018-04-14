@@ -1,6 +1,7 @@
 const scssInput = ['scss/style.scss'],
     scssOutput = 'app/css',
     vendorInput = [
+        'scripts/vendor/jquery3.1.js',
         'scripts/vendor/*.js'
     ],
     jsInput = [

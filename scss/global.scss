@@ -1,17 +1,43 @@
 // Load Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700');
 
 body {
-	font-family: 'Roboto', sans-serif;
-	display: flex;
+	font-family: 'IBM Plex Mono', monospace;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
-}
 
+}
+.hidden {
+	display: none;
+}
+.fadeIn {
+	animation-name: fade_in;
+	animation-duration: 0.5s;	
+}
+.fadeOut {
+	animation-name: fade_out;
+	animation-duration: 0.5s;	
+}
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade_out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}
 // Global Variables
-$black: #3d3d3d;
-$white: #ededed;
+// $black: #3d3d3d;
+// $white: #ededed;
 $light-blue: #6fbfe8;
 $accent-orange: #d6751b;
 

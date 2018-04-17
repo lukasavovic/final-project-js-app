@@ -1,0 +1,32 @@
+#artists {
+    height: 70vh;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    .artist {
+        height: 33.33%;
+        background-color: #fff;
+        width: 70%;
+        margin: 0 auto;
+        transition: 0.5s all ease;
+        &:hover {
+          height: 65%;
+        }
+    }
+    #blue {
+        background-color: blue;
+        background-image: url(https://i.pinimg.com/originals/39/e9/b3/39e9b39628e745a39f900dc14ee4d9a7.jpg);
+        background-size: cover;
+        
+    }
+    #yellow {
+        background-image: url(https://i.ytimg.com/vi/TZiQK81Rjfw/maxresdefault.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    #purple {
+        background-image: url(https://i.pinimg.com/originals/39/e9/b3/39e9b39628e745a39f900dc14ee4d9a7.jpg);
+        background-size: cover;
+        background-position: center bottom;
+    }
+}

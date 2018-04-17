@@ -4,7 +4,7 @@ nav {
     justify-content: flex-end;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
     padding: 50px;
     img{
         width: 30px;
@@ -26,6 +26,7 @@ nav {
     align-items: center;
     flex-direction: column; 
     padding: 50px;
+    z-index: 102;
         #xClose {
             position: absolute;
             top:0;
@@ -40,6 +41,12 @@ nav {
             text-decoration: none;
             color: white;
             font-size: 40px;
+            transition: 0.3s all ease-out;
+            &:hover {
+                color: #d80044;
+            }
         }
     
 }
+
+

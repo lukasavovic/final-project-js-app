@@ -13,15 +13,14 @@ function markoFunkcija(args) {
 
     return true;
 }
-'use strict';
+"use strict";
 
-console.log('I have entered this file.');
-console.log('This is crystal clear evidence that this works.');
+var galleryImg = document.querySelectorAll('.galleryBoxes div');
+console.log(galleryImg);
 
-var calculation = 200 + 223;
-
-console.log('Sanity Check: 200 + 223 = ' + calculation);
-console.log('bye.');
+for (var i = 0; i < galleryImg.length; i++) {
+    galleryImg[i].style.backgroundImage = "url(../img/tattoo/img" + i + ".jpg";
+}
 'use strict';
 
 var navButton = document.querySelector('nav');
@@ -34,10 +33,20 @@ navButton.addEventListener('click', function () {
     menu.classList.remove('fadeOut');
 });
 
-closeX.addEventListener('click', function () {
-    menu.classList.toggle('fadeOut');
-    menu.classList.remove('fadeIn');
-    setTimeout(function () {
-        menu.classList.toggle('hidden');
-    }, 500);
+// closeX.addEventListener('click', function(){
+//     menu.classList.toggle('fadeOut');
+//     menu.classList.remove('fadeIn');
+//     setTimeout(() => {
+//         menu.classList.toggle('hidden')
+//     }, 500);
+// });
+'use strict';
+
+$('document').ready(function () {
+
+    $('#work').click(function (e) {
+        $('#menu').toggleClass("hidden");
+        $('html, body').animate({}, 1000);
+        e.preventDefault();
+    });
 });

@@ -10,11 +10,11 @@ navButton.addEventListener('click',function(){
 });
 
 
-closeX.addEventListener('click', function(){
-    menu.classList.toggle('fadeOut');
-    menu.classList.remove('fadeIn');
-    setTimeout(() => {
-        menu.classList.toggle('hidden')
-    }, 500);
-});
+// closeX.addEventListener('click', function(){
+//     menu.classList.toggle('fadeOut');
+//     menu.classList.remove('fadeIn');
+//     setTimeout(() => {
+//         menu.classList.toggle('hidden')
+//     }, 500);
+// });
 

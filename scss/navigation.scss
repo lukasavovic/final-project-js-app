@@ -8,6 +8,8 @@ nav {
     padding: 50px;
     img{
         width: 30px;
+        height: 30px;
+        z-index: 101;
         &:hover {
             cursor: pointer;
         }
@@ -25,17 +27,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    padding: 50px;
-    z-index: 102;
-        #xClose {
-            position: absolute;
-            top:0;
-            right: 0;
-            padding: 50px;
-            margin-top: 20px;
-            color: white;
-            font-size: 35px;
-        }
+    z-index: 99;
         a {
             padding: 50px;
             text-decoration: none;

@@ -1,11 +1,11 @@
 // Load Fonts
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700');
-
+@import url('https://fonts.googleapis.com/css?family=Allerta|Bowlby+One+SC|Marcellus+SC');
 body {
-	font-family: 'IBM Plex Mono', monospace;
+	font-weight: 500;
+	font-family: 'Allerta';
 	justify-content: center;
 	align-items: center;
-
 }
 .hidden {
 	display: none;
@@ -36,8 +36,8 @@ body {
 	}
 }
 // Global Variables
-// $black: #3d3d3d;
-// $white: #ededed;
+$black: #111111;
+$white: #ededed;
 $light-blue: #6fbfe8;
 $accent-orange: #d6751b;
 

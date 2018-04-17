@@ -1,0 +1,45 @@
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 50px;
+    img{
+        width: 30px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+#menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color:$white;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 50px;
+        #xClose {
+            position: absolute;
+            top:0;
+            right: 0;
+            padding: 50px;
+            margin-top: 20px;
+            color: white;
+            font-size: 35px;
+        }
+        a {
+            padding: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 40px;
+        }
+    
+}

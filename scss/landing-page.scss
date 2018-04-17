@@ -1,0 +1,23 @@
+#landing_page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    z-index: -1;
+    #hero {
+        height: 60vh;
+        background:$black;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;   
+            h1 {
+                font-size: 300%;
+            }
+    }
+}

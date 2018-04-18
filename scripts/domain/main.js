@@ -1,6 +1,6 @@
 var navButton = document.querySelector('nav');
 var menu = document.getElementById('menu');
-var closeX = document.getElementById('xClose');
+
 
 
 navButton.addEventListener('click',function(){

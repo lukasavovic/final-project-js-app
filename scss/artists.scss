@@ -3,6 +3,7 @@
     margin: 100px auto;
     display: flex;
     flex-direction: column;
+    margin-top: 250px;
     .artist {
         height: 33.33%;
         background-color: #fff;
@@ -14,18 +15,20 @@
         }
     }
     #blue {
-        background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
+        // background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
         background-size: cover;
-        
+        background-color: peru;
     }
     #yellow {
-        background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
+        // background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
         background-size: cover;
         background-position: center;
+        background-color: navy;
     }
     #purple {
-        background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
+        // background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
         background-size: cover;
         background-position: center bottom;
+        background-color: palegreen;
     }
 }

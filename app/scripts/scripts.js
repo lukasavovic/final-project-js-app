@@ -19,7 +19,6 @@ request.send();
 
 var navButton = document.querySelector('nav');
 var menu = document.getElementById('menu');
-var closeX = document.getElementById('xClose');
 
 navButton.addEventListener('click', function () {
     menu.classList.toggle('fadeIn');
@@ -34,6 +33,7 @@ navButton.addEventListener('click', function () {
 //         menu.classList.toggle('hidden')
 //     }, 500);
 // });
+"use strict";
 'use strict';
 
 $('document').ready(function () {
@@ -49,4 +49,3 @@ $('document').ready(function () {
         }
     });
 });
-"use strict";

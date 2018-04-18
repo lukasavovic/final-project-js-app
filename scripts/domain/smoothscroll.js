@@ -1,10 +1,13 @@
 $('document').ready(function(){
     
-    $('#work').click(function(e){
-        $('#menu').toggleClass( "hidden");
-        $('html, body').animate({
-             
-        }, 1000);
-        e.preventDefault();
+    $(this).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if(scroll > $('#hero').offset().top){
+            $('#facebook').removeClass('hidden');
+            $('#instagram').removeClass('hidden')
+        } else {
+            $('#facebook').addClass('hidden');
+            $('#instagram').addClass('hidden')
+        }
     });
 });

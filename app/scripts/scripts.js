@@ -1,20 +1,5 @@
 'use strict';
 
-agCookie.create('example-cookie', true, 1);
-
-var readValue = agCookie.read('example-cookie');
-
-console.log(readValue);
-
-agCookie.erase('example-cookie');
-
-function markoFunkcija(args) {
-    console.log(args);
-
-    return true;
-}
-'use strict';
-
 var URL = 'https://api.myjson.com/bins/hd8ej ';
 
 var request = new XMLHttpRequest();
@@ -53,9 +38,15 @@ navButton.addEventListener('click', function () {
 
 $('document').ready(function () {
 
-    $('#work').click(function (e) {
-        $('#menu').toggleClass("hidden");
-        $('html, body').animate({}, 1000);
-        e.preventDefault();
+    $(this).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > $('#hero').offset().top) {
+            $('#facebook').removeClass('hidden');
+            $('#instagram').removeClass('hidden');
+        } else {
+            $('#facebook').addClass('hidden');
+            $('#instagram').addClass('hidden');
+        }
     });
 });
+"use strict";

@@ -1,0 +1,36 @@
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+        h1 {
+            font-size: 550%;
+            color: black;
+            margin-bottom: 25px;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            flex-direction: column;
+            input {
+                width: 70%;
+                height: 75px;
+                padding: 10px;
+                text-align: center;
+                background-color: black;
+                color: white;
+                font-size: 90%;
+                border: none;
+                margin: 10px;   
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            #submit {
+                color: black;
+                background-color: #fff;
+                font-size: 200%;
+                font-weight: bolder;
+            }
+        }
+}

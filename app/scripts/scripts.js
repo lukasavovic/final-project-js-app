@@ -1,6 +1,16 @@
 'use strict';
 
-var URL = 'https://api.myjson.com/bins/hd8ej ';
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = { index: link, event: event },
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+'use strict';
+
+var URL = 'http://api.myjson.com/bins/hd8ej ';
 
 var request = new XMLHttpRequest();
 request.open('GET', URL);
@@ -8,10 +18,13 @@ request.responseType = 'json';
 request.onload = function () {
     for (var i = 0; i < request.response.length; i++) {
         var gallery = document.querySelector('.galleryBoxes');
-        var galleryImg = document.createElement("DIV");
-        galleryImg.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
-        galleryImg.style.backgroundImage = "url(../img/tattoo/" + request.response[i];
-        gallery.appendChild(galleryImg);
+        var galleryLink = document.createElement("a");
+        galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
+        galleryLink.href = "img/tattoo/" + request.response[i];
+        var imgTumbnail = document.createElement('img');
+        imgTumbnail.src = "img/tattoo/" + request.response[i];
+        galleryLink.appendChild(imgTumbnail);
+        gallery.appendChild(galleryLink);
     }
 };
 request.send();
@@ -43,11 +56,12 @@ $('document').ready(function () {
     $(this).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > $('#hero').offset().top) {
-            $('#facebook').removeClass('hidden');
-            $('#instagram').removeClass('hidden');
-        } else {
-            $('#facebook').addClass('hidden');
-            $('#instagram').addClass('hidden');
+            $('#facebook').addClass('fadeIn');
+            $('#instagram').addClass('fadeIn');
+            setTimeout(function () {
+                $('#facebook').removeClass('opacityZero');
+                $('#instagram').removeClass('opacityZero');
+            }, 15);
         }
     });
 });

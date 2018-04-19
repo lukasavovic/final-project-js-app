@@ -21,7 +21,7 @@
 			<div id="menu" class="hidden">
 				<a href="#" id="home">HOME</a>
 				<a href="#gallery" id="work">GALLERY</a>
-				<a href="#">CONTACT</a>
+				<a href="/contact.html">CONTACT</a>
 			</div>
 		</div>
 			
@@ -37,21 +37,27 @@
 	</div>
 	<!-- HERO END -->
 
-	<!-- GALLERY -->
-	<div class="container" id="gallery">
-		
-		<a href="contact.html" id="facebook" class="hidden">facebook</a>
-		<a href="" id="instagram" class="hidden">instagram</a>
-		<div class="container justify-content-center blueimp-gallery "id="blueimp-gallery">
+	<!-- LIGHTBOX GALLERY -->
+	<div id="blueimp-gallery" class="blueimp-gallery">
+		<div class="slides"></div>
+		<h3 class="title"></h3>
+		<a class="prev">‹</a>
+		<a class="next">›</a>
+		<a class="close">×</a>
+		<a class="play-pause"></a>
+		<ol class="indicator"></ol>
+	</div>
+
+		<div class="container" id="gallery" >
+			<a href="https://www.facebook.com/KOBRADELUKS/" id="facebook" target="_blank" class="opacityZero">facebook</a>
+			<a href="https://bit.ly/2qLxjLm" id="instagram" target="_blank"class="opacityZero">instagram</a>
 			<h1>our work</h1>
-			<div class="row galleryBoxes">
-				
+			<div id="links" class="row galleryBoxes">
+			
 			</div>
 		</div>
-	
-	</div>
-	<!-- GALLERY END -->
 
+	<!-- LIGHTBOX GALLERY END -->
 
 	<!-- ARTISTS START -->
 	<div class="container" id="artists">
@@ -59,10 +65,12 @@
 		<div class="artist" id="yellow"></div>
 		<div class="artist" id="purple"></div>
 	</div>
-	<div class="container">	
-		<h3>all rights receved, kobra deluks 2018</h3>
+	<div class="container" id="footer">	
+		<h3> kobra deluks 2018, all rights receved</h3>
+		<!-- <img src="img/kobra1.png" alt=""> -->
 	</div>
 	<script type="text/javascript" src="scripts/vendor.js"></script>
 	<script type="text/javascript" src="scripts/scripts.min.js"></script>
+
 </body>
 </html>

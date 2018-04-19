@@ -30,12 +30,23 @@ nav {
     z-index: 99;
         a {
             padding: 50px;
+            position: relative;
             text-decoration: none;
             color: white;
             font-size: 40px;
             transition: 0.3s all ease-out;
-            &:hover {
-                color: #d80044;
+            &:hover:before {
+               width: 100%;
+            }
+            &:before {
+                content: "";
+                width: 0%;
+                transition: 0.3s all ease-out;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                background-color: #fff;
+                height: 5px;
             }
         }
     

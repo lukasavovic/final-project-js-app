@@ -12,7 +12,7 @@ body {
 }
 .fadeIn {
 	animation-name: fade_in;
-	animation-duration: 0.5s;	
+	animation-duration: 0.6s;	
 }
 .fadeOut {
 	animation-name: fade_out;
@@ -41,3 +41,6 @@ $white: #ededed;
 $light-blue: #6fbfe8;
 $accent-orange: #d6751b;
 
+.opacityZero {
+	opacity: 0;
+}

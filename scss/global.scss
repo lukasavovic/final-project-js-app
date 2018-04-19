@@ -44,3 +44,27 @@ $accent-orange: #d6751b;
 .opacityZero {
 	opacity: 0;
 }
+
+.snake {
+	background-image: url(https://media.giphy.com/media/117Ryx7sfip73O/giphy.gif);
+	background-size: contain;
+	opacity: 0;
+	// display: none;
+	width: 50px;
+	height: 20px;
+	background-size: cover;
+	position: absolute;
+	top: 30%;
+	z-index: 1;
+	transform: rotate(20deg);
+	left: 20%;
+	animation: snake 10s infinite;
+}
+
+@keyframes snake {
+	0% {display:block}
+	10% {opacity: 0}
+	25% {opacity: 1}
+	60% {opacity: 0}
+	100% {opacity: 0}
+}

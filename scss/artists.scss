@@ -4,7 +4,9 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 250px;
+    position: relative;
     align-items: center;
+    
     h1 {
         animation: headingAnimation 4s infinite alternate backwards;
         text-align: center;
@@ -14,8 +16,26 @@
         width: 20%;
         margin: 50px auto;
     }
-    img {
-        width: 600px;
+    .aritstImg {
+        margin: 0 auto;
+        position: relative;
+        background-image: url(../img/artists.png);
+        background-size: cover;
+        overflow: scroll;
+        max-height: 50vh;
+        background-repeat: no-repeat;
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        overflow-x: hidden;
+        
+        p {
+            font-size: 50px;
+            width: 75%;
+            top: 0%;
+            color: $white;
+            font-weight: bolder;
+        }
     }
 }
     

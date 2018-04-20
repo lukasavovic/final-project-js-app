@@ -1,36 +1,58 @@
 #contact {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height:100vh;
+    height:85vh;
         h1 {
-            font-size: 550%;
+            font-size: 300%;
             color: black;
             margin-bottom: 25px;
         }
         form {
-            display: flex;
-            align-items: center;
-            width: 50%;
-            flex-direction: column;
+            font-family: 'Allerta';
+            justify-content: center;
+         
             input {
-                width: 70%;
-                height: 75px;
-                padding: 10px;
-                text-align: center;
-                background-color: black;
+
+                height: 50px;
+                padding: 15px;
+                // text-align: center;
+                background-color: #111111;
                 color: white;
-                font-size: 90%;
+                font-size: 20px;
                 border: none;
                 margin: 10px;   
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            textarea {
+                background-color:black;
+                color: white;
+                border: none;
+                padding: 25px;
+                margin: 10px;  
             }
             #submit {
                 color: black;
                 background-color: #fff;
-                font-size: 200%;
+                font-size: 25px;
                 font-weight: bolder;
+                text-transform: lowercase;
+                &:before {
+                    content: "";
+                    width: 0%;
+                    transition: 0.3s all ease-out;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    background-color: black;
+                    height: 5px;
+                }
+                &:hover:before {
+                    width: 100%;
+                 }
+               
             }
         }
 }

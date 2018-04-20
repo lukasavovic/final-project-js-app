@@ -1,34 +1,12 @@
 #artists {
-    height: 70vh;
     margin: 100px auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 250px;
-    .artist {
-        height: 33.33%;
-        background-color: #fff;
-        width: 70%;
-        margin: 0 auto;
-        transition: 0.5s all ease;
-        &:hover {
-          height: 65%;
-        }
-    }
-    #blue {
-        // background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
-        background-size: cover;
-        background-color: peru;
-    }
-    #yellow {
-        // background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
-        background-size: cover;
-        background-position: center;
-        background-color: navy;
-    }
-    #purple {
-        // background-image: url(https://media.giphy.com/media/11GcuDwjenvENa/giphy.gif);
-        background-size: cover;
-        background-position: center bottom;
-        background-color: palegreen;
+    align-items: center;
+    img {
+        width: 600px;
     }
 }
+    

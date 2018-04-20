@@ -1,32 +1,33 @@
-// document.getElementById('links').onclick = function (event) {
-//     event = event || window.event;
-//     var target = event.target || event.srcElement,
-//         link = target.src ? target.parentNode : target,
-//         options = {index: link, event: event},
-//         links = this.getElementsByTagName('a');
-//     blueimp.Gallery(links, options);
-// };
-"use strict";
+'use strict';
 
-// var URL = 'http://api.myjson.com/bins/hd8ej ';
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = { index: link, event: event },
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+'use strict';
 
-//     var request = new XMLHttpRequest();
-//     request.open('GET', URL);
-//     request.responseType = 'json';
-//     request.onload = function(){
-//         for (var i=0; i<request.response.length;i++){
-//             var gallery = document.querySelector('.galleryBoxes');
-//             var galleryLink = document.createElement("a");
-//             galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
-//             galleryLink.href = "img/tattoo/"+request.response[i];
-//             var imgTumbnail = document.createElement('img');
-//             imgTumbnail.src = "img/tattoo/tumbnail/tumb"+i+".jpg";
-//             galleryLink.appendChild(imgTumbnail);
-//             gallery.appendChild(galleryLink);
-//         }
-//     }
-// request.send();
-"use strict";
+var URL = 'http://api.myjson.com/bins/hd8ej ';
+
+var request = new XMLHttpRequest();
+request.open('GET', URL);
+request.responseType = 'json';
+request.onload = function () {
+    for (var i = 0; i < request.response.length; i++) {
+        var gallery = document.querySelector('.galleryBoxes');
+        var galleryLink = document.createElement("a");
+        galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
+        galleryLink.href = "img/tattoo/" + request.response[i];
+        var imgTumbnail = document.createElement('img');
+        imgTumbnail.src = "img/tattoo/tumbnail/tumb" + i + ".jpg";
+        galleryLink.appendChild(imgTumbnail);
+        gallery.appendChild(galleryLink);
+    }
+};
+request.send();
 'use strict';
 
 var navButton = document.querySelector('nav');
@@ -62,11 +63,11 @@ console.log(snake);
 
 setTimeout(function () {
     for (var i = 0; i < snake.length; i++) {
-        snake[i].style.top = Math.random() * 250 + "%";
-        snake[i].style.left = Math.random() * 90 + "%";
+        snake[i].style.top = Math.random() * 45 + "%";
+        snake[i].style.left = Math.random() * 50 + "%";
         snake[i].style.transform = "rotate(" + Math.random() * 360 + "deg)";
     }
-}, 1000);
+}, 500);
 'use strict';
 
 $('document').ready(function () {

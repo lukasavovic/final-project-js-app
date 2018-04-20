@@ -45,24 +45,32 @@ $accent-orange: #d6751b;
 	opacity: 0;
 }
 
-.snake {
-	font-size: 320px;
-	font-family: Arial, Helvetica, sans-serif;
-	width: 40px;
-	height: 40px;
-	opacity: 0;
-	background-size: cover;
-	position: absolute;
-	top: 30%;
-	z-index: -1;
-	transform: rotate(20deg);
-	left: 20%;
-	animation: snake 10s infinite;
-}
+// .snake {
+// 	font-size: 320px;
+// 	font-family: Arial, Helvetica, sans-serif;
+// 	width: 40px;
+// 	height: 40px;
+// 	opacity: 0;
+// 	background-size: cover;
+// 	position: absolute;
+// 	top: 30%;
+// 	z-index: -1;
+// 	transform: rotate(20deg);
+// 	left: 20%;
+// 	animation: snake 10s infinite;
+// }
 
 @keyframes snake {
 	0% {display:block}
 	10% {opacity: 0}
 	37% {opacity: 1}
 	100% {opacity: 0}
+}
+
+@keyframes headingAnimation {
+	0% {transform: translate(5px,5px)}
+	10% {transform: translate(-7px,4px)}
+	40% {transform: translate(3px, 5px)}
+	60% {transform: translate(2px, -4px)}
+	100% {transform: translate(-6px, -3px)}
 }

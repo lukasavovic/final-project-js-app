@@ -28,6 +28,7 @@ request.onload = function () {
     }
 };
 request.send();
+"use strict";
 'use strict';
 
 var navButton = document.querySelector('nav');
@@ -55,7 +56,6 @@ navButton.addEventListener('click', function () {
         rec_top.style.transform = "translateY(49%)";
     }
 });
-"use strict";
 "use strict";
 
 var snake = document.querySelectorAll('.snake');

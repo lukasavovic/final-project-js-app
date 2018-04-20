@@ -5,6 +5,15 @@
     justify-content: center;
     margin-top: 250px;
     align-items: center;
+    h1 {
+        animation: headingAnimation 4s infinite alternate backwards;
+        text-align: center;
+        font-size: 25px;
+        padding: 10px;
+        color: $black;
+        width: 20%;
+        margin: 50px auto;
+    }
     img {
         width: 600px;
     }

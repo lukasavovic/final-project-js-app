@@ -72,6 +72,42 @@ $accent-orange: #d6751b;
 	10% {transform: translate(-7px,4px)}
 	40% {transform: translate(3px, 5px)}
 	60% {transform: translate(2px, -4px)}
-	100% {transform: translate(-6px, -3px)}
+	90% {transform: translate(-6px, -3px)}
 }
 
+@keyframes topBorder_animation {
+	0% {width: 0%}
+	10% { width: 100%;}
+	75% {transform: translate(0%);}
+	85% {transform: translateX(100%);}
+	100% {transform: translateX(100%);}
+}
+
+@keyframes bottomBorder_animation {
+	0% {width: 0%}
+	10% { width: 100%;}
+	75% {transform: translate(0%)}
+	85% {transform: translateX(-100%);
+	width: 100%;}
+	100% {transform: translateX(-100%);
+		width: 100%;}
+}
+@keyframes rightBorder_animation {
+	0% {height: 0%}
+	10% { height: 100%;}
+	75% {transform: translateY(0%)}
+	85% {transform: translateY(100%);
+	height: 100%;}
+	100% {transform: translateY(100%);
+		height: 100%;}
+	
+}
+@keyframes leftBorder_animation {
+	0% {height: 0%}
+	10% { height: 100%;}
+	75% {transform: translateY(0%)}
+	85% {transform: translateY(-100%);
+	height: 100%;}
+	100% {transform: translateY(-100%);
+		height: 100%;}
+}

@@ -84,3 +84,6 @@ $('document').ready(function () {
         }
     });
 });
+'use strict';
+
+var borderTop = document.getElementById('borderTop');

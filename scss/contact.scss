@@ -1,18 +1,22 @@
 #contact {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
     justify-content: center;
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    height:85vh;
-        h1 {
-            font-size: 300%;
-            color: black;
-            margin-bottom: 25px;
-        }
+    height:80vh;
+      
         form {
             font-family: 'Allerta';
             justify-content: center;
+            position: relative;
+            max-width: 100%;
+            h1 {
+                font-size: 300%;
+                color: black;
+                // max-width: 50%;
+                // display: block;
+                padding: 15px;
+                margin-bottom: 25px;
+            }
             label {
                 display: none;
                 font-size: 45px;
@@ -31,13 +35,69 @@
                 margin: 10px;   
                 // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
-            textarea {
-                background-color:black;
-                color: white;
-                border: none;
-                padding: 25px;
-                margin: 10px;  
+            #texteara {
+                position: relative;
+                max-width: 55%;
+                overflow: hidden;
+                .borderText {
+                    position: absolute;
+                    background-color: black;
+                    animation-timing-function:ease-in;
+                }
+                #borderTop {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    animation-name: topBorder_animation;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                }
+                #borderRight {
+                    height: 0%;
+                    width: 3px;
+                    right: 0;
+                    animation-name: rightBorder_animation;
+                    animation-duration: 5s;
+                    animation-delay: 0.45s;
+                    animation-iteration-count: infinite;
+                }
+                #borderBottom {
+                    width: 0%;
+                    bottom: 0;
+                    height: 3px;
+                    right: 0;
+                    animation-name: bottomBorder_animation;
+                    animation-duration: 5s;
+                    animation-delay: 0.95s;
+                    animation-iteration-count: infinite;
+                }
+                #borderLeft {
+                    height: 0%;
+                    width: 3px;
+                    left: 0;
+                    bottom: 0;
+                    animation-name: leftBorder_animation;
+                    animation-duration: 5s;
+                    animation-delay: 1.45s;
+                    animation-iteration-count: infinite;
+                }
+                textarea {
+                    // background-color:black;
+                    color: black;
+                    text-decoration: underline;
+                    border: 1px solid black;
+                    border: none;
+                    // animation: borderAnimation 1s ease:
+                    padding: 25px 45px;
+                    // margin: 10px;  
+                    max-width: 90%;
+                    outline: none;
+                    font-size: 30px;
+                }
+              
             }
+            
             #submit {
                 color: black;
                 background-color: #fff;
@@ -60,5 +120,18 @@
                  }
                
             }
+            a{
+                width: 40px;
+                position: absolute;
+                bottom: -100px;
+                right: calc(25% + 20px);
+                &:hover svg{
+                   transform: scale(1.1);
+                }
+                svg {
+                    transition: 0.2s all ease-in-out;
+                }
+            }
+                
         }
 }

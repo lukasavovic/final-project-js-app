@@ -1,5 +1,6 @@
 
-var URL = 'http://api.myjson.com/bins/hd8ej ';
+if ( document.querySelector('.galleryBoxes') !== null) {
+    var URL = 'http://api.myjson.com/bins/hd8ej ';
 
     var request = new XMLHttpRequest();
     request.open('GET', URL);
@@ -17,3 +18,5 @@ var URL = 'http://api.myjson.com/bins/hd8ej ';
         }
     }
 request.send();
+}
+

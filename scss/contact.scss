@@ -1,44 +1,85 @@
 #contact {
     justify-content: center;
-    display: flex;
     align-items: center;
-    height:80vh;
+    height:85vh;
       
         form {
             font-family: 'Allerta';
             justify-content: center;
             position: relative;
-            max-width: 100%;
+            min-width: 100%;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
             h1 {
+                font-weight: normal;
                 font-size: 300%;
                 color: black;
-                // max-width: 50%;
-                // display: block;
                 padding: 15px;
                 margin-bottom: 25px;
             }
             label {
-                display: none;
-                font-size: 45px;
+                color: black;
+                // display: none;
+                font-size: 200%;
             }
             input {
                 height: 50px;
                 display: none;
                 padding: 15px;
-                // text-align: center;
-                border: none;
+                // border: block;
                 background-color: white;
                 border-bottom: 12px solid black;
                 color: black;
                 font-size: 20px;
+                margin: 10px;
+                // margin-top: 40px;
+              
+            }
+            #nameInput {
+                display: none;
+                width: 100%;
+                input {
+                    height: 50px;
+                    display: block;
+                    padding: 20px;
+                    // margin: 0 auto;
+                    border: none;
+                    background-color: white;
+                    border-bottom: 2px solid black;
+                    color: black;
+                    font-size: 40px;
+                    margin-top: 25px;
+                    width: 80%;
+                    // text-align: center;
+                    outline: none;
+                    margin-top: 50px;
+                }
                 
-                margin: 10px;   
-                // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            #emailInput {
+                display: none;
+                width: 100%;
+                input {
+                    height: 50px;
+                    display: block;
+                    padding: 20px;
+                    // margin: 0 auto;
+                    border: none;
+                    background-color: white;
+                    border-bottom: 2px solid black;
+                    color: black;
+                    font-size: 40px;
+                    margin-top: 25px;
+                    width: 80%;
+                    // text-align: center;
+                    outline: none;
+                }
             }
             #texteara {
                 position: relative;
-                max-width: 55%;
                 overflow: hidden;
+                opacity: 1;
                 .borderText {
                     position: absolute;
                     background-color: black;
@@ -48,83 +89,69 @@
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 3px;
+                    height: 2px;
                     animation-name: topBorder_animation;
-                    animation-duration: 5s;
+                    animation-duration: 10s;
                     animation-iteration-count: infinite;
                 }
                 #borderRight {
                     height: 0%;
-                    width: 3px;
+                    width: 2px;
                     right: 0;
                     animation-name: rightBorder_animation;
-                    animation-duration: 5s;
-                    animation-delay: 0.45s;
+                    animation-duration: 10s;
+                    animation-delay: 0.95s;
                     animation-iteration-count: infinite;
                 }
                 #borderBottom {
                     width: 0%;
                     bottom: 0;
-                    height: 3px;
+                    height: 2px;
                     right: 0;
                     animation-name: bottomBorder_animation;
-                    animation-duration: 5s;
-                    animation-delay: 0.95s;
+                    animation-duration: 10s;
+                    animation-delay: 1.95s;
                     animation-iteration-count: infinite;
                 }
                 #borderLeft {
                     height: 0%;
-                    width: 3px;
+                    width: 2px;
                     left: 0;
                     bottom: 0;
                     animation-name: leftBorder_animation;
-                    animation-duration: 5s;
-                    animation-delay: 1.45s;
+                    animation-duration: 10s;
+                    animation-delay: 2.95s;
                     animation-iteration-count: infinite;
                 }
                 textarea {
-                    // background-color:black;
                     color: black;
-                    text-decoration: underline;
                     border: 1px solid black;
                     border: none;
-                    // animation: borderAnimation 1s ease:
                     padding: 25px 45px;
-                    // margin: 10px;  
-                    max-width: 90%;
+                    margin: 10px;  
+                    max-width: 100%;
                     outline: none;
                     font-size: 30px;
+                    &:placeholder {
+                        color: black;
+                    }
                 }
-              
             }
-            
-            #submit {
-                color: black;
-                background-color: #fff;
-                font-size: 25px;
-                font-weight: bolder;
-                text-transform: lowercase;
-                border: none;
-                &:before {
-                    content: "";
-                    width: 0%;
-                    transition: 0.3s all ease-out;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    background-color: black;
-                    height: 5px;
+            #thanks {
+                display: none;
+                h1 {
+                    font-weight: normal;
+                    font-size: 200%;
+                    color: black;
+                    padding: 15px;
+                    margin-bottom: 25px;
                 }
-                &:hover:before {
-                    width: 100%;
-                 }
-               
             }
             a{
                 width: 40px;
                 position: absolute;
                 bottom: -100px;
-                right: calc(25% + 20px);
+                right: calc(25% - 20px);
                 &:hover svg{
                    transform: scale(1.1);
                 }

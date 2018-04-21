@@ -1,1 +1,0 @@
-var borderTop = document.getElementById('borderTop');

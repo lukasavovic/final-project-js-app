@@ -7,9 +7,9 @@ var rec_top =  document.getElementById('XMLID_1_');
 navButton.addEventListener('click',function(){
     if(open) {
         svg.style.fill = "black";
-        menu.classList.toggle('fadeIn');
+        // menu.classList.toggle('fadeIn');
         menu.classList.toggle("hidden");
-        menu.classList.remove('fadeOut');
+        // menu.classList.remove('fadeOut');
         open = false;
         rec_bottom.style.transform = "translateY(0%)";
         rec_top.style.transform = "translateY(0%)";
@@ -18,7 +18,7 @@ navButton.addEventListener('click',function(){
         svg.style.fill = "white";
         menu.classList.toggle('fadeIn');
         menu.classList.toggle("hidden");
-        menu.classList.remove('fadeOut');
+        // menu.classList.remove('fadeOut');
         open = true;
         rec_bottom.style.transform = "translateY(-49%)";
         rec_top.style.transform = "translateY(49%)";

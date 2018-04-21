@@ -14,10 +14,12 @@
             font-family: 'Allerta';
             justify-content: center;
             label {
+                display: none;
                 font-size: 45px;
             }
             input {
                 height: 50px;
+                display: none;
                 padding: 15px;
                 // text-align: center;
                 border: none;

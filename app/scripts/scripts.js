@@ -22,7 +22,7 @@ request.onload = function () {
         galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
         galleryLink.href = "img/tattoo/" + request.response[i];
         var imgTumbnail = document.createElement('img');
-        imgTumbnail.src = "img/tattoo/tumbnail/tumb" + i + ".jpg";
+        imgTumbnail.src = "img/tattoo/tumbnail/" + request.response[i];
         galleryLink.appendChild(imgTumbnail);
         gallery.appendChild(galleryLink);
     }

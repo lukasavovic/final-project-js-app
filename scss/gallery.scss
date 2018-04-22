@@ -20,6 +20,7 @@
             transition: 0.2s all ease-in-out;
         }
         &:hover {
+            color: #cc003f;
             &:before {
                 left: 0%;
             }
@@ -44,6 +45,7 @@
             transition: 0.2s all ease-in-out;
         }
         &:hover {
+            color: #cc003f;
             &:before {
                 left: 0%;
             }
@@ -54,6 +56,7 @@
         font-size: 25px;
         padding: 10px;
         color: $black;
+        // color: #cc003f;
         width: 20%;
         margin: 50px auto;
         animation: headingAnimation 4s infinite alternate backwards;

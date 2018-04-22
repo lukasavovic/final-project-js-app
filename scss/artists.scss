@@ -21,9 +21,11 @@
     }
     .aritstImg {
         margin: 0 auto;
+        max-width: 75%;
         position: relative;
         background-image: url(../img/aritst.gif);
-        background-size: cover;
+        background-size: 300px 300px;
+        background-position: center;
         overflow: scroll;
         max-height: 60vh;
         margin: 50px;
@@ -32,8 +34,9 @@
         height: 500px;
         width: 100%;
         p {
-            font-size: 40px;
-            width: 75%;
+            font-size: 30px;
+            margin: 0 auto;
+            // padding: 80px;
             top: 0%;
             color: $black;
             font-weight: bolder;

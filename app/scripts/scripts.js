@@ -60,7 +60,7 @@ if (form != null) {
 'use strict';
 
 if (document.querySelector('.galleryBoxes') !== null) {
-    var URL = 'http://api.myjson.com/bins/hd8ej ';
+    var URL = 'http://api.myjson.com/bins/1dwakz ';
 
     var request = new XMLHttpRequest();
     request.open('GET', URL);
@@ -72,7 +72,7 @@ if (document.querySelector('.galleryBoxes') !== null) {
             galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
             galleryLink.href = "img/tattoo/" + request.response[i];
             var imgTumbnail = document.createElement('img');
-            imgTumbnail.src = "img/tattoo/tumbnail/" + request.response[i];
+            imgTumbnail.src = "img/tattoo/tumbnail/" + "tumb" + [i] + ".jpg";
             galleryLink.appendChild(imgTumbnail);
             gallery.appendChild(galleryLink);
         }

@@ -1,6 +1,11 @@
 @import url(fonts/Kollektif.ttf);
 @import url(fonts/Kollektif-Bold.ttf);
 
+@font-face {
+	font-family: Kollektif;
+	src: url(fonts/Kollektif.ttf);
+	
+}
 body {
 	font-weight: 500;
 	font-family: 'Kollektif';

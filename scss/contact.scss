@@ -4,7 +4,6 @@
     height:85vh;
       
         form {
-            font-family: 'Allerta';
             justify-content: center;
             position: relative;
             min-width: 100%;
@@ -12,11 +11,12 @@
             top: 50%;
             left: 50%;
             h1 {
-                font-weight: normal;
-                font-size: 300%;
+                font-weight: bold;
+                font-size: 400%;
                 color: black;
                 padding: 15px;
                 margin-bottom: 25px;
+
             }
             label {
                 color: black;
@@ -89,14 +89,14 @@
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 2px;
+                    height: 4px;
                     animation-name: topBorder_animation;
                     animation-duration: 10s;
                     animation-iteration-count: infinite;
                 }
                 #borderRight {
                     height: 0%;
-                    width: 2px;
+                    width: 4px;
                     right: 0;
                     animation-name: rightBorder_animation;
                     animation-duration: 10s;
@@ -106,7 +106,7 @@
                 #borderBottom {
                     width: 0%;
                     bottom: 0;
-                    height: 2px;
+                    height: 4px;
                     right: 0;
                     animation-name: bottomBorder_animation;
                     animation-duration: 10s;
@@ -115,7 +115,7 @@
                 }
                 #borderLeft {
                     height: 0%;
-                    width: 2px;
+                    width: 4px;
                     left: 0;
                     bottom: 0;
                     animation-name: leftBorder_animation;
@@ -140,8 +140,8 @@
             #thanks {
                 display: none;
                 h1 {
-                    font-weight: normal;
-                    font-size: 200%;
+                    font-weight: bold;
+                    font-size: 300%;
                     color: black;
                     padding: 15px;
                     margin-bottom: 25px;

@@ -72,7 +72,7 @@ if (document.querySelector('.galleryBoxes') !== null) {
             galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
             galleryLink.href = "img/tattoo/" + request.response[i];
             var imgTumbnail = document.createElement('img');
-            imgTumbnail.src = "img/tattoo/tumbnail/" + "tumb" + [i] + ".jpg";
+            imgTumbnail.src = "img/tattoo/tumbnail/" + request.response[i];
             galleryLink.appendChild(imgTumbnail);
             gallery.appendChild(galleryLink);
         }
@@ -121,17 +121,19 @@ setTimeout(function () {
 }, 500);
 'use strict';
 
-$('document').ready(function () {
+if ($('#hero').length) {
+    $('document').ready(function () {
 
-    $(this).scroll(function () {
-        var scroll = $(window).scrollTop();
-        if (scroll > $('#hero').offset().top) {
-            $('#facebook').addClass('fadeIn');
-            $('#instagram').addClass('fadeIn');
-            setTimeout(function () {
-                $('#facebook').removeClass('opacityZero');
-                $('#instagram').removeClass('opacityZero');
-            }, 15);
-        }
+        $(this).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > $('#hero').offset().top) {
+                $('#facebook').addClass('fadeIn');
+                $('#instagram').addClass('fadeIn');
+                setTimeout(function () {
+                    $('#facebook').removeClass('opacityZero');
+                    $('#instagram').removeClass('opacityZero');
+                }, 15);
+            }
+        });
     });
-});
+}

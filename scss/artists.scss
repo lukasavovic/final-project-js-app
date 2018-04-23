@@ -17,7 +17,7 @@
         padding: 10px;
         color: $black;
         width: 20%;
-        margin: 50px auto;
+        margin: 20px auto;
     }
     .aritstImg {
         // border-top: 2px solid black;
@@ -29,24 +29,26 @@
         background-size: 300px 300px;
         background-position: center;
         overflow: scroll;
-        max-height: 60vh;
+        // max-height: 60vh;
         margin: 50px;
         background-repeat: no-repeat;
         overflow-x: hidden;
         // height: 500px;
         width: 100%;
         img {
-            // width: 800px;
+            max-width: 800px;
             display: block;
+            margin: 20px auto;
             // height: 600px;
             // position: fixed;
         }
         p {
             // background-color: $black;
-            font-size: 30px;
-            margin: 0 auto;
+            font-size: 35px;
+            margin: 40px auto;
             top: 0%;
-            // opacity: 0.5;
+            border: 4px solid #cc003f;
+            padding: 20px;
             color: $black;
             font-weight: bolder;
         }

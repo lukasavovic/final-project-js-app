@@ -1,14 +1,16 @@
-$('document').ready(function(){
+if($('#hero').length){
+    $('document').ready(function(){
     
-    $(this).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if(scroll > $('#hero').offset().top){
-            $('#facebook').addClass('fadeIn'); 
-            $('#instagram').addClass('fadeIn');  
-            setTimeout(()=>{
-                $('#facebook').removeClass('opacityZero');  
-                $('#instagram').removeClass('opacityZero');  
-            }, 15);
-        }
-    });
-});
+        $(this).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if(scroll > $('#hero').offset().top){
+                $('#facebook').addClass('fadeIn'); 
+                $('#instagram').addClass('fadeIn');  
+                setTimeout(()=>{
+                    $('#facebook').removeClass('opacityZero');  
+                    $('#instagram').removeClass('opacityZero');  
+                }, 15);
+            }
+        });
+    });    
+}

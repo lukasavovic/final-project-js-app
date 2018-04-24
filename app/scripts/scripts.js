@@ -69,16 +69,19 @@ function emailValidatio() {
     if (re.test(String(emailInputValue).toLowerCase())) {
         return true;
     } else {
-        messageD.innerHTML = "that is not a real email...";
+        messageD.innerHTML = "that is not a VALID email...";
     }
 }
 
 function nameValidation() {
     var nameInputValue = document.getElementById("nameInputValue").value;
-    if (nameInputValue !== "") {
-        return true;
+    if (nameInputValue !== "" && nameInputValue.length > 2) {
+        var re = /^[a-z ,.'-]+$/i;
+        if (re.test(String(nameInputValue).toLowerCase())) {
+            return true;
+        }
     } else {
-        messageD.innerHTML = "hey, dont leave before telling us your name";
+        messageD.innerHTML = "hey, dont leave before telling us your REAL name";
     }
 }
 
@@ -87,7 +90,7 @@ function textAreaValidation() {
     if (textAreaValue !== "") {
         return true;
     } else {
-        messageD.innerHTML = "please say something first";
+        messageD.innerHTML = "please say something...";
     }
 }
 'use strict';
@@ -140,18 +143,17 @@ navButton.addEventListener('click', function () {
         rec_top.style.transform = "translateY(49%)";
     }
 });
-"use strict";
 
-var snake = document.querySelectorAll('.snake');
-console.log(snake);
-
-setTimeout(function () {
-    for (var i = 0; i < snake.length; i++) {
-        snake[i].style.top = Math.random() * 45 + "%";
-        snake[i].style.left = Math.random() * 50 + "%";
-        snake[i].style.transform = "rotate(" + Math.random() * 360 + "deg)";
-    }
-}, 500);
+var navLinks = document.querySelectorAll("#menu a");
+for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function () {
+        svg.style.fill = "black";
+        menu.classList.toggle("hidden");
+        open = false;
+        rec_bottom.style.transform = "translateY(0%)";
+        rec_top.style.transform = "translateY(0%)";
+    });
+}
 'use strict';
 
 if ($('#hero').length) {

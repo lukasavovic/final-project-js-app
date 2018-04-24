@@ -25,3 +25,14 @@ navButton.addEventListener('click',function(){
     }
   
 });
+
+var navLinks = document.querySelectorAll("#menu a");
+for (var i=0;i<navLinks.length;i++) {
+    navLinks[i].addEventListener("click",function(){
+        svg.style.fill = "black";
+        menu.classList.toggle("hidden");
+        open = false;
+        rec_bottom.style.transform = "translateY(0%)";
+        rec_top.style.transform = "translateY(0%)";
+    });
+}

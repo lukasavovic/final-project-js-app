@@ -10,13 +10,29 @@
             transform: translate(-50%,-50%);
             top: 50%;
             left: 50%;
+            #message {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                max-width: 50%;
+                // background-color: red;
+                z-index: 20;
+                @media (max-width: 770px){
+                    max-width: 100%;
+                    bottom: -100px;
+                }
+                h1 {
+                    color: red;
+                    font-size: 20px;
+                }
+            }
             h1 {
                 font-weight: bold;
                 font-size: 400%;
                 color: black;
                 padding: 15px;
                 margin-bottom: 25px;
-                @media (max-width: 700px) {
+                @media (max-width: 800px) {
                     font-size: 40px;
                 }
 
@@ -153,6 +169,7 @@
                 position: absolute;
                 bottom: -100px;
                 right: calc(25% - 20px);
+                z-index: 200;
                 &:hover svg{
                    transform: scale(1.1);
                 }

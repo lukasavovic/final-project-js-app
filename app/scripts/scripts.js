@@ -13,10 +13,11 @@ if (document.getElementById('links') !== null) {
 'use strict';
 
 var nextArrow = document.getElementById('nextArrow');
-var currentPosition = 0;
+var currentPosition = 1;
 
 var nameInput = document.getElementById('nameInput');
 var textArea = document.getElementById('texteara');
+var messageD = document.getElementById('messageD');
 var emailInput = document.getElementById('emailInput');
 var thankMsg = document.getElementById('thanks');
 
@@ -24,26 +25,30 @@ var form = document.querySelector('form');
 if (form != null) {
     nextArrow.addEventListener('click', function (e) {
         e.preventDefault();
-        currentPosition += 1;
-        if (currentPosition === 1) {
+        if (currentPosition === 1 && textAreaValidation()) {
             textArea.classList.add('fadeOut');
             setTimeout(function () {
+                messageD.innerHTML = "";
                 nameInput.style.display = "block";
                 textArea.style.display = "none";
                 nameInput.classList.add('fadeIn');
+                currentPosition = 2;
             }, 399);
         }
-        if (currentPosition === 2) {
+        if (currentPosition === 2 && nameValidation()) {
             nameInput.classList.add('fadeOut');
             setTimeout(function () {
+                messageD.innerHTML = "";
                 emailInput.style.display = "block";
                 nameInput.style.display = "none";
                 emailInput.classList.add('fadeIn');
+                currentPosition = 3;
             }, 399);
         }
-        if (currentPosition === 3) {
+        if (currentPosition === 3 && emailValidatio()) {
             emailInput.classList.add('fadeOut');
             setTimeout(function () {
+                messageD.innerHTML = "";
                 thankMsg.style.display = "block";
                 emailInput.style.display = "none";
                 thankMsg.classList.add('fadeIn');
@@ -57,6 +62,34 @@ if (form != null) {
         e.preventDefault();
     });
 }
+
+function emailValidatio() {
+    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    var emailInputValue = document.getElementById("emailInputValue").value;
+    if (re.test(String(emailInputValue).toLowerCase())) {
+        return true;
+    } else {
+        messageD.innerHTML = "that is not a real email...";
+    }
+}
+
+function nameValidation() {
+    var nameInputValue = document.getElementById("nameInputValue").value;
+    if (nameInputValue !== "") {
+        return true;
+    } else {
+        messageD.innerHTML = "hey, dont leave before telling us your name";
+    }
+}
+
+function textAreaValidation() {
+    var textAreaValue = document.getElementById('textAreaValue').value;
+    if (textAreaValue !== "") {
+        return true;
+    } else {
+        messageD.innerHTML = "please say something first";
+    }
+}
 'use strict';
 
 if (document.querySelector('.galleryBoxes') !== null) {
@@ -69,7 +102,7 @@ if (document.querySelector('.galleryBoxes') !== null) {
         for (var i = 0; i < request.response.length; i++) {
             var gallery = document.querySelector('.galleryBoxes');
             var galleryLink = document.createElement("a");
-            galleryLink.className = 'col-lg-4 col-md-6 col-sm-12 galleryImg';
+            galleryLink.className = 'col-lg-6 col-md-6 col-sm-12 galleryImg';
             galleryLink.href = "img/tattoo/" + request.response[i];
             var imgTumbnail = document.createElement('img');
             imgTumbnail.src = "img/tattoo/tumbnail/" + request.response[i];
